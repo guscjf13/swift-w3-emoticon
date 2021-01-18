@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		435F4BD325B51885002EBCF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435F4BD225B51885002EBCF5 /* AppDelegate.swift */; };
 		435F4BD525B51885002EBCF5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435F4BD425B51885002EBCF5 /* SceneDelegate.swift */; };
-		435F4BD725B51885002EBCF5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435F4BD625B51885002EBCF5 /* ViewController.swift */; };
 		435F4BDA25B51885002EBCF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 435F4BD825B51885002EBCF5 /* Main.storyboard */; };
 		435F4BDC25B51888002EBCF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 435F4BDB25B51888002EBCF5 /* Assets.xcassets */; };
 		435F4BDF25B51888002EBCF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 435F4BDD25B51888002EBCF5 /* LaunchScreen.storyboard */; };
 		435F4BEA25B51888002EBCF5 /* EmoticonAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435F4BE925B51888002EBCF5 /* EmoticonAppTests.swift */; };
 		435F4BF525B51888002EBCF5 /* EmoticonAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435F4BF425B51888002EBCF5 /* EmoticonAppUITests.swift */; };
+		435F4C0525B523E0002EBCF5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435F4C0425B523E0002EBCF5 /* MainViewController.swift */; };
+		435F4C0825B52439002EBCF5 /* pattern.png in Resources */ = {isa = PBXBuildFile; fileRef = 435F4C0725B52439002EBCF5 /* pattern.png */; };
+		435F4C0A25B5243F002EBCF5 /* basket.png in Resources */ = {isa = PBXBuildFile; fileRef = 435F4C0925B5243F002EBCF5 /* basket.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +40,6 @@
 		435F4BCF25B51885002EBCF5 /* EmoticonApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmoticonApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		435F4BD225B51885002EBCF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		435F4BD425B51885002EBCF5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		435F4BD625B51885002EBCF5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		435F4BD925B51885002EBCF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		435F4BDB25B51888002EBCF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		435F4BDE25B51888002EBCF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +50,9 @@
 		435F4BF025B51888002EBCF5 /* EmoticonAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmoticonAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		435F4BF425B51888002EBCF5 /* EmoticonAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmoticonAppUITests.swift; sourceTree = "<group>"; };
 		435F4BF625B51888002EBCF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		435F4C0425B523E0002EBCF5 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		435F4C0725B52439002EBCF5 /* pattern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pattern.png; sourceTree = "<group>"; };
+		435F4C0925B5243F002EBCF5 /* basket.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = basket.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +103,11 @@
 		435F4BD125B51885002EBCF5 /* EmoticonApp */ = {
 			isa = PBXGroup;
 			children = (
+				435F4C0625B52411002EBCF5 /* Image */,
+				435F4C0325B523A8002EBCF5 /* Model */,
+				435F4C0225B52399002EBCF5 /* View Controller */,
 				435F4BD225B51885002EBCF5 /* AppDelegate.swift */,
 				435F4BD425B51885002EBCF5 /* SceneDelegate.swift */,
-				435F4BD625B51885002EBCF5 /* ViewController.swift */,
 				435F4BD825B51885002EBCF5 /* Main.storyboard */,
 				435F4BDB25B51888002EBCF5 /* Assets.xcassets */,
 				435F4BDD25B51888002EBCF5 /* LaunchScreen.storyboard */,
@@ -126,6 +132,30 @@
 				435F4BF625B51888002EBCF5 /* Info.plist */,
 			);
 			path = EmoticonAppUITests;
+			sourceTree = "<group>";
+		};
+		435F4C0225B52399002EBCF5 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				435F4C0425B523E0002EBCF5 /* MainViewController.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		435F4C0325B523A8002EBCF5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		435F4C0625B52411002EBCF5 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				435F4C0925B5243F002EBCF5 /* basket.png */,
+				435F4C0725B52439002EBCF5 /* pattern.png */,
+			);
+			path = Image;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,8 +262,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				435F4C0825B52439002EBCF5 /* pattern.png in Resources */,
 				435F4BDF25B51888002EBCF5 /* LaunchScreen.storyboard in Resources */,
 				435F4BDC25B51888002EBCF5 /* Assets.xcassets in Resources */,
+				435F4C0A25B5243F002EBCF5 /* basket.png in Resources */,
 				435F4BDA25B51885002EBCF5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,9 +291,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				435F4BD725B51885002EBCF5 /* ViewController.swift in Sources */,
 				435F4BD325B51885002EBCF5 /* AppDelegate.swift in Sources */,
 				435F4BD525B51885002EBCF5 /* SceneDelegate.swift in Sources */,
+				435F4C0525B523E0002EBCF5 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
