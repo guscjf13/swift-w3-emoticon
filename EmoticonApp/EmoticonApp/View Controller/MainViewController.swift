@@ -14,7 +14,7 @@ class MainViewController: UIViewController {
     var eventView : EventView?
     
     let margin : CGFloat = 20
-    let topMargin : CGFloat = UIApplication.shared.statusBarFrame.height
+    let topMargin : CGFloat = UIApplication.shared.statusBarFrame.height+40
     let deviceSize = UIScreen.main.bounds.size
     
     override func viewDidLoad() {
