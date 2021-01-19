@@ -23,6 +23,7 @@ extension EmoTableView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = self.dequeueReusableCell(withIdentifier: "EmoTableViewCell", for: indexPath) as! EmoTableViewCell
+        cell.emoImageView.image = UIImage(named: emoticonSample[indexPath.row].image)
         cell.emoTitleLabel.text = emoticonSample[indexPath.row].title
         cell.emoAuthorLabel.text = emoticonSample[indexPath.row].author
         
