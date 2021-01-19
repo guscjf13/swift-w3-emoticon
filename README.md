@@ -12,3 +12,9 @@
 
 3. EventView, Emoticon Class 생성
 - Emoticon Class에 sample return하는 class func 추가
+
+4. EmoTableView 생성
+- EmoTableView, EmoTabelViewCell 생성
+- Main VC에서 EventView 와 EmoTableView 초기화
+- EmoTableView 객체에서 이미지를 제외한 데이터 출력
+![Simulator Screen Shot - iPhone 11 - 2021-01-19 at 16 15 39](https://user-images.githubusercontent.com/28801805/105000628-e4b7ff00-5a71-11eb-85f7-54047b9579f3.png)
