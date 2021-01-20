@@ -10,22 +10,31 @@ import UIKit
 
 class EmoTableView : UITableView {
     
-    let emoticonSample = Emoticon.makeSample()
+    var emoticonData : [Emoticon] = [Emoticon]()
+    
+    func initData(emoticons: [Emoticon]) {
+        emoticonData = emoticons
+    }
+    func addData(emoticons: [Emoticon]) {
+        for emoticon in emoticons {
+            emoticonData.append(emoticon)
+        }
+    }
     
 }
 
 extension EmoTableView: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return emoticonSample.count
+        return emoticonData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = self.dequeueReusableCell(withIdentifier: "EmoTableViewCell", for: indexPath) as! EmoTableViewCell
-        cell.emoImageView.image = UIImage(named: emoticonSample[indexPath.row].image)
-        cell.emoTitleLabel.text = emoticonSample[indexPath.row].title
-        cell.emoAuthorLabel.text = emoticonSample[indexPath.row].author
+        cell.emoImageView.image = UIImage(named: emoticonData[indexPath.row].image)
+        cell.emoTitleLabel.text = emoticonData[indexPath.row].title
+        cell.emoAuthorLabel.text = emoticonData[indexPath.row].author
         
         return cell
         
