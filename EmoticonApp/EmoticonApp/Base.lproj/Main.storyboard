@@ -50,6 +50,9 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <state key="normal" title="구매"/>
+                                                    <connections>
+                                                        <action selector="emoBuyButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fca-WP-gie"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -84,7 +87,7 @@
         <!--History-->
         <scene sceneID="dAN-Gj-oUv">
             <objects>
-                <tableViewController storyboardIdentifier="CartTableViewController" id="pzr-x9-qCt" customClass="CartTableViewController" customModule="EmoticonApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="CartTableViewController" id="pzr-x9-qCt" customClass="CartViewController" customModule="EmoticonApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="v1L-ld-nn8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

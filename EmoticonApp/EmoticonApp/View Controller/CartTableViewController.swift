@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CartTableViewController: UITableViewController {
+class CartViewController: UITableViewController {
 
     @IBOutlet weak var cartTableView: UITableView!
     override func viewDidLoad() {
