@@ -65,7 +65,7 @@ class MainViewController: UIViewController {
         let contentView = sender.superview
         let cell = contentView?.superview as! UITableViewCell
         let indexPath = emoTableView.indexPath(for: cell)
-        db.addEmoticon(emoticon: emoTableView.emoticonData[indexPath!.row])
+        db.addCartItem(cartItem: CartItem(emoticon: emoTableView.emoticonData[indexPath!.row]))
         
     }
     

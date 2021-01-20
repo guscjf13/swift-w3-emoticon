@@ -32,7 +32,8 @@ class SQLite {
         ID integer primary key autoincrement,
         TITLE text,
         AUTHOR text,
-        IMAGE text
+        IMAGE text,
+        DATE text
         )
         """
         if sqlite3_exec(db, createTableQuery, nil, nil, nil) == SQLITE_OK {
@@ -42,15 +43,16 @@ class SQLite {
         
     }
     
-    func addEmoticon(emoticon: Emoticon) -> Bool {
+    func addCartItem(cartItem: CartItem) -> Bool {
         
-        let insertQuery = "insert into Cart (TITLE, AUTHOR, IMAGE) values (?,?,?)"
+        let insertQuery = "insert into Cart (TITLE, AUTHOR, IMAGE, DATE) values (?,?,?,?)"
         var insertStatement: OpaquePointer? = nil
         if sqlite3_prepare(db, insertQuery, -1, &insertStatement, nil) == SQLITE_OK {
             
-            sqlite3_bind_text(insertStatement, 1, (emoticon.title as NSString).utf8String, -1, nil)
-            sqlite3_bind_text(insertStatement, 2, (emoticon.author as NSString).utf8String, -1, nil)
-            sqlite3_bind_text(insertStatement, 3, (emoticon.image as NSString).utf8String, -1, nil)
+            sqlite3_bind_text(insertStatement, 1, (cartItem.emoticon.title as NSString).utf8String, -1, nil)
+            sqlite3_bind_text(insertStatement, 2, (cartItem.emoticon.author as NSString).utf8String, -1, nil)
+            sqlite3_bind_text(insertStatement, 3, (cartItem.emoticon.image as NSString).utf8String, -1, nil)
+            sqlite3_bind_text(insertStatement, 4, (cartItem.date as NSString).utf8String, -1, nil)
             if sqlite3_step(insertStatement) == SQLITE_DONE {
                 return true
             }
@@ -60,10 +62,10 @@ class SQLite {
         
     }
     
-    func getEmoticonList() -> [Emoticon] {
+    func getAllCartItems() -> [CartItem] {
         
-        var emoticonList = [Emoticon]()
-        let selectQuery = "select TITLE, AUTHOR, IMAGE from Cart"
+        var cartItemList = [CartItem]()
+        let selectQuery = "select TITLE, AUTHOR, IMAGE, DATE from Cart"
         var selectStatement: OpaquePointer? = nil
         if sqlite3_prepare(db, selectQuery, -1, &selectStatement, nil) == SQLITE_OK {
             
@@ -71,16 +73,17 @@ class SQLite {
                 let title = String(cString: sqlite3_column_text(selectStatement, 0))
                 let author = String(cString: sqlite3_column_text(selectStatement, 1))
                 let image = String(cString: sqlite3_column_text(selectStatement, 2))
-                emoticonList.append(Emoticon(title: title, author: author, image: image))
+                let date = String(cString: sqlite3_column_text(selectStatement, 3))
+                cartItemList.append(CartItem(emoticon: Emoticon(title: title, author: author, image: image), date: date))
             }
             
         }
         
-        return emoticonList
+        return cartItemList
         
     }
     
-    func deleteEmoticon(emoticon: Emoticon) -> Bool {
+    func deleteCartItem(cartItem: CartItem) -> Bool {
         return true
     }
     

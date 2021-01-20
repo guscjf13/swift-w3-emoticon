@@ -13,6 +13,7 @@
 		433B070425B6B902003B9CE1 /* EmoTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433B070325B6B902003B9CE1 /* EmoTableView.swift */; };
 		433B070A25B7C509003B9CE1 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433B070925B7C509003B9CE1 /* CartViewController.swift */; };
 		433B070D25B7D5C2003B9CE1 /* SQLite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433B070C25B7D5C2003B9CE1 /* SQLite.swift */; };
+		433B071125B83309003B9CE1 /* CartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433B071025B83309003B9CE1 /* CartItem.swift */; };
 		435F4BD325B51885002EBCF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435F4BD225B51885002EBCF5 /* AppDelegate.swift */; };
 		435F4BD525B51885002EBCF5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435F4BD425B51885002EBCF5 /* SceneDelegate.swift */; };
 		435F4BDA25B51885002EBCF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 435F4BD825B51885002EBCF5 /* Main.storyboard */; };
@@ -47,6 +48,7 @@
 		433B070325B6B902003B9CE1 /* EmoTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmoTableView.swift; sourceTree = "<group>"; };
 		433B070925B7C509003B9CE1 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		433B070C25B7D5C2003B9CE1 /* SQLite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLite.swift; sourceTree = "<group>"; };
+		433B071025B83309003B9CE1 /* CartItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItem.swift; sourceTree = "<group>"; };
 		435F4BCF25B51885002EBCF5 /* EmoticonApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmoticonApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		435F4BD225B51885002EBCF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		435F4BD425B51885002EBCF5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				433B06F125B675B4003B9CE1 /* Emoticon.swift */,
+				433B071025B83309003B9CE1 /* CartItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 			files = (
 				435F4BD325B51885002EBCF5 /* AppDelegate.swift in Sources */,
 				433B070225B6B7B7003B9CE1 /* EmoTableViewCell.swift in Sources */,
+				433B071125B83309003B9CE1 /* CartItem.swift in Sources */,
 				433B070425B6B902003B9CE1 /* EmoTableView.swift in Sources */,
 				433B06F225B675B4003B9CE1 /* Emoticon.swift in Sources */,
 				433B070D25B7D5C2003B9CE1 /* SQLite.swift in Sources */,
