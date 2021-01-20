@@ -21,6 +21,7 @@ class EventView: UIView {
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+        setEvent()
     }
     
     func setEvent() {
@@ -63,13 +64,13 @@ class EventView: UIView {
 
     func setEventImage(name: String) {
         
-        if let image = UIImage(named: name) {
-            eventImage.image = image
-            let imageMargin : CGFloat = 10
-            let imageSize : CGFloat = 180
-            eventImage.frame = CGRect(x: self.frame.width-imageSize-imageMargin, y: imageMargin, width: imageSize, height: imageSize)
-            self.addSubview(eventImage)
-        }
+        guard let image = UIImage(named: name) else {return}
+        eventImage.image = image
+        let imageMargin : CGFloat = 10
+        let imageSize : CGFloat = 180
+        eventImage.frame = CGRect(x: self.frame.width-imageSize-imageMargin, y: imageMargin, width: imageSize, height: imageSize)
+        self.addSubview(eventImage)
+        
     }
 
 }
