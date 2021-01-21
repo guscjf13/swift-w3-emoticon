@@ -83,6 +83,16 @@ class SQLite {
         
     }
     
+    func deleteAllCartItems() -> Bool {
+        
+        let deleteAllQuery = "delete from Cart"
+        if sqlite3_exec(db, deleteAllQuery, nil, nil, nil) == SQLITE_OK {
+            return true
+        }
+        return false
+        
+    }
+    
     func deleteCartItem(cartItem: CartItem) -> Bool {
         return true
     }

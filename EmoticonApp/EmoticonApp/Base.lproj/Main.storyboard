@@ -82,7 +82,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1031.8840579710145" y="139.95535714285714"/>
+            <point key="canvasLocation" x="1038" y="140"/>
         </scene>
         <!--History-->
         <scene sceneID="dAN-Gj-oUv">
@@ -93,13 +93,33 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="gcO-VH-nQW">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CartItemViewCell" id="gcO-VH-nQW" customClass="CartItemViewCell" customModule="EmoticonApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gcO-VH-nQW" id="RbN-3c-oHj">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gcO-VH-nQW" id="RbN-3c-oHj" customClass="CartItemViewCell" customModule="EmoticonApp" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M0T-nr-4Qz">
+                                            <rect key="frame" x="20" y="11" width="167" height="22"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A9U-rR-qhL">
+                                            <rect key="frame" x="201" y="10" width="193" height="22"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="dateLabel" destination="A9U-rR-qhL" id="VXM-EC-13q"/>
+                                    <outlet property="emoTitleLabel" destination="M0T-nr-4Qz" id="Dcr-5i-kvU"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -108,12 +128,20 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="History" id="M0m-Ec-LQ9">
-                        <barButtonItem key="rightBarButtonItem" title="Clear" id="92M-RF-uwP"/>
+                        <barButtonItem key="rightBarButtonItem" title="Clear" id="92M-RF-uwP">
+                            <connections>
+                                <action selector="clearButtonTouched:" destination="pzr-x9-qCt" id="jkx-ZV-i5X"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="cartItemTableView" destination="v1L-ld-nn8" id="UFg-HG-LsA"/>
+                        <outlet property="clearButton" destination="92M-RF-uwP" id="uLE-3F-zPu"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M9t-Tr-oGf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1963" y="139"/>
+            <point key="canvasLocation" x="1962.3188405797102" y="138.61607142857142"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="YFR-HZ-32a">

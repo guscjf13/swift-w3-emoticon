@@ -19,12 +19,13 @@ class MainViewController: UIViewController {
     let emoticonSample = Emoticon.makeSample()
     
     override func viewDidLoad() {
-        
         super.viewDidLoad()
         initView()
-        db.openDB()
-        db.createTable()
-        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        initDB()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -33,10 +34,13 @@ class MainViewController: UIViewController {
     }
     
     func initView() {
-        
         initEventView()
         initEmoTableView()
-        
+    }
+    
+    func initDB() {
+        db.openDB()
+        db.createTable()
     }
     
     func initEventView() {
