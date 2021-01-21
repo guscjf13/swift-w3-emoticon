@@ -34,13 +34,27 @@
 - 카트 버튼 누르면 CartTableViewController로 이동
 ![스크린샷 2021-01-19 오후 5 39 01](https://user-images.githubusercontent.com/28801805/105008988-49c52200-5a7d-11eb-9052-ec55c097c6d8.png)
 
+
 7. make SQLite
 - SQLite 테이블 생성, 함수 작성
 ![스크린샷 2021-01-20 오후 1 31 15(2)](https://user-images.githubusercontent.com/28801805/105128937-6158e500-5b27-11eb-8a0d-65912c47c04e.png)
 ![스크린샷 2021-01-20 오후 1 44 03(2)](https://user-images.githubusercontent.com/28801805/105128942-6322a880-5b27-11eb-8340-91a368084d20.png)
 
+
 8. modify SQLite, CartItem
 - SQLite 테이블 구조 수정(Date 추가)
--CartItem 클래스 생성
+- CartItem 클래스 생성
 ![스크린샷 2021-01-20 오후 6 51 43](https://user-images.githubusercontent.com/28801805/105157762-a5141480-5b50-11eb-8099-6edcf13854d4.png)
 
+
+9. modify SQLite, add CartViewController
+- SQLite 함수 추가
+- CartViewController에 TlbleView, clear button 터치 이벤트 추가
+![Simulator Screen Shot - iPhone 11 - 2021-01-21 at 12 50 35](https://user-images.githubusercontent.com/28801805/105277728-506fa880-5be7-11eb-87ff-6cf646ba5e5c.png)
+![Simulator Screen Shot - iPhone 11 - 2021-01-21 at 12 50 37](https://user-images.githubusercontent.com/28801805/105277731-51a0d580-5be7-11eb-9bbb-29b8e8f2f348.png)
+
+
+10. add CartViewController delete button
+- CartViewController에 delete 버튼 추가
+![Simulator Screen Shot - iPhone 11 - 2021-01-21 at 13 05 43](https://user-images.githubusercontent.com/28801805/105278727-6f6f3a00-5be9-11eb-9648-30cbfe8e15be.png)
+![Simulator Screen Shot - iPhone 11 - 2021-01-21 at 13 05 46](https://user-images.githubusercontent.com/28801805/105278732-70a06700-5be9-11eb-8edd-8a51f2122940.png)

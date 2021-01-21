@@ -49,6 +49,17 @@ class CartViewController: UITableViewController {
         
     }
     
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if (editingStyle == .delete) {
+            if(db.deleteCartItem(cartItem: cartItem[indexPath.row])) {
+                cartItem.remove(at: indexPath.row)
+                cartItemTableView.reloadData()
+            }
+        }
+        
+    }
+    
     @IBAction func clearButtonTouched(_ sender: UIBarButtonItem) {
         
         if(db.deleteAllCartItems()) {

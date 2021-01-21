@@ -65,16 +65,17 @@ class SQLite {
     func getAllCartItems() -> [CartItem] {
         
         var cartItemList = [CartItem]()
-        let selectQuery = "select TITLE, AUTHOR, IMAGE, DATE from Cart"
+        let selectQuery = "select * from Cart"
         var selectStatement: OpaquePointer? = nil
         if sqlite3_prepare(db, selectQuery, -1, &selectStatement, nil) == SQLITE_OK {
             
             while(sqlite3_step(selectStatement) == SQLITE_ROW) {
-                let title = String(cString: sqlite3_column_text(selectStatement, 0))
-                let author = String(cString: sqlite3_column_text(selectStatement, 1))
-                let image = String(cString: sqlite3_column_text(selectStatement, 2))
-                let date = String(cString: sqlite3_column_text(selectStatement, 3))
-                cartItemList.append(CartItem(emoticon: Emoticon(title: title, author: author, image: image), date: date))
+                let id = Int(sqlite3_column_int(selectStatement, 0)) 
+                let title = String(cString: sqlite3_column_text(selectStatement, 1))
+                let author = String(cString: sqlite3_column_text(selectStatement, 2))
+                let image = String(cString: sqlite3_column_text(selectStatement, 3))
+                let date = String(cString: sqlite3_column_text(selectStatement, 4))
+                cartItemList.append(CartItem(id: id, emoticon: Emoticon(title: title, author: author, image: image), date: date))
             }
             
         }
@@ -94,7 +95,13 @@ class SQLite {
     }
     
     func deleteCartItem(cartItem: CartItem) -> Bool {
-        return true
+        
+        let deleteAllQuery = "delete from Cart where id = \(cartItem.id)"
+        if sqlite3_exec(db, deleteAllQuery, nil, nil, nil) == SQLITE_OK {
+            return true
+        }
+        return false
+        
     }
     
     func deleteTable() -> Bool{

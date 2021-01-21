@@ -10,6 +10,7 @@ import Foundation
 
 class CartItem {
     
+    var id: Int = -1
     var emoticon: Emoticon
     var date: String
     
@@ -20,7 +21,8 @@ class CartItem {
         self.date = format.string(from: Date())
     }
     
-    init(emoticon: Emoticon, date: String) {
+    init(id: Int, emoticon: Emoticon, date: String) {
+        self.id = id
         self.emoticon = emoticon
         self.date = date
     }
